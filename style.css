@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --bg-color: #1c1c1e; /* Fundo principal escuro */
+    --text-color: #ffffff; /* Cor do texto */
+    --highlight-color: #ff9800; /* Cor de destaque vibrante */
+    --secondary-bg: #282828; /* Fundo secundário mais claro */
+    --font: "Poppins", sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--secondary-bg);
+    padding: 2rem 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--highlight-color);
+    margin: 0;
+}
+
+nav {
+    margin-top: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    margin: 0 1.5rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: var(--highlight-color);
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--highlight-color);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.graficos-container {
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 1rem 2rem;
+}
+
+.graficos-container__texto {
+    font-size: 1.4rem;
+    background-color: var(--secondary-bg);
+    color: var(--text-color);
+    text-align: center;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    background-color: var(--secondary-bg);
+    color: var(--text-color);
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+    font-size: 1rem;
+}
+
+footer span {
+    color: var(--highlight-color);
+}
